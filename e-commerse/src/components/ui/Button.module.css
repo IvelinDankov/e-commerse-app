@@ -1,0 +1,23 @@
+.textBtn {
+  border: none;
+  cursor: pointer;
+  color: var(--primary-color);
+  background-color: transparent;
+  font-weight: normal;
+}
+
+/* .textBtn:hover {
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--primary-color);
+} */
+
+.buttonText {
+  border: none;
+  cursor: pointer;
+  color: var(--primary-color);
+  font-weight: normal;
+}
+
+.closeBtn {
+  border: none;
+}
