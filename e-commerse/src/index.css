@@ -10,19 +10,17 @@
   --primary-color: #000000;
   --secondary-color-blue: #377dff;
   --secondary-color-green: #38c889;
-  --secondary-color-orange: #FFAB00;
-  --secondary-color-red: #FF5630;
-  
+  --secondary-color-orange: #ffab00;
+  --secondary-color-red: #ff5630;
+
   --gray-color-7: #141718;
   --gray-color-6: #232627;
   --gray-color-5: #343839;
-  --gray-color-4: #6C7275;
-  --gray-color-3: #E8ECEF;
-  --gray-color-2: #F3F5F7;
-  --gray-color-1: #FEFEFE;
-
+  --gray-color-4: #6c7275;
+  --gray-color-3: #e8ecef;
+  --gray-color-2: #f3f5f7;
+  --gray-color-1: #fefefe;
 }
-
 
 * {
   margin: 0;
@@ -32,6 +30,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -43,6 +42,6 @@ body {
 
 .icon {
   width: 1em;
-      height: 1em;
-      vertical-align: -0.125em;
+  height: 1em;
+  vertical-align: -0.125em;
 }
