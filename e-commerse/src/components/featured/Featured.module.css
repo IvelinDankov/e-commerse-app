@@ -1,0 +1,51 @@
+.featuredSection {
+  width: 100%;
+  padding: 4.8rem 0;
+  background-color: var(--gray-color-1);
+}
+.featuredBox {
+  max-width: calc(144rem);
+  padding-left: 17rem;
+  margin: 0 auto;
+  font-family: "poppins";
+  overflow: hidden;
+}
+
+.featuredBox ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.featuredBox h2 {
+  font-weight: normal;
+  letter-spacing: -0.4px;
+  line-height: 44px;
+  font-size: 4rem;
+}
+
+.header {
+    display: flex;
+    padding-right: 17rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4.8rem;
+}
+
+.header .points {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.header .points a {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.header .points a.active { 
+    background-color: #777
+}

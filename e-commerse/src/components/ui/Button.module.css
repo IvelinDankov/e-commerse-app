@@ -18,6 +18,22 @@
   font-weight: normal;
 }
 
+.button {
+  border: none;
+  background-color: var(--secondary-color-green);
+  color: var(--primary-color);
+  padding: 1.2rem 5.6rem;
+  border-radius: 8px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: .3s all;
+}
+
+.button:hover {
+  background-color: var(--gray-color-3);
+  box-shadow: 0 3px 6px var(--secondary-color-green);
+}
+
 .closeBtn {
   border: none;
 }

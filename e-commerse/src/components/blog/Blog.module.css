@@ -1,0 +1,32 @@
+.blogSection {
+  width: 100%;
+  background-color: var(--gray-color-1);
+}
+.blogWrapper {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 8rem 0;
+}
+.blogHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blogHeader h2 {
+  font-size: 4rem;
+  font-weight: normal;
+  margin-bottom: 4rem;
+}
+.blogItems {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.blogItems img {
+    width: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,43 @@
+.heroWrapper {
+  width: 100%;
+}
+
+.heroContainer {
+    width: 144rem;
+    /* margin: 0 auto; */
+    background-image: url('../../../public/homeImage/Paste\ image.png');
+    background-position:0 0 ;
+    background-size: contain;
+    background-repeat: repeat;
+    margin: 0 auto;
+  height: 82rem;
+  color: var(--gray-color-1);
+  /* position: relative; */
+}
+
+.heroContainer > div {
+    max-width: 110rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.textContent {
+    width: 49.7rem;
+    
+}
+
+.mainHeading {
+    font-family: 'Poppins';
+    font-size:7.2rem;
+    line-height: 8rem;
+    text-align-last: left;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 -3px 0 var(--gray-color-4);
+}
+.textContent p {
+    font-family: 'Inter';
+    font-size: 2rem;
+    margin-bottom: 2.8rem;
+}

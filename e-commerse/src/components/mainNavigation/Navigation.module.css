@@ -1,0 +1,93 @@
+
+.nav {
+    width: 100%;
+    background-color: var(--gray-color-1);
+}
+
+.nav__wrapper {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 0;
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 2rem;
+  width: 10.5rem;
+  height: 2.4rem;
+  color: var(--primary-color);
+  border: 0.5px solid var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 4px var(--gray-color-4);
+}
+
+.logo span {
+  font-size: var(--heading-2);
+  color: var(--gray-color-4);
+}
+
+.navItem {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--gray-color-4);
+}
+a:hover,
+a:active {
+  color: var(--primary-color);
+}
+
+
+
+a.active {
+  color: var(--primary-color);
+}
+
+.navInfo {
+    height: 30rem;
+    width: 140rem;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--gray-color-1);
+    text-align: center;
+    margin: 1rem 0;
+    z-index: 100;
+    padding: 2rem;
+}
+
+a span {
+  display: inline-block;
+  transform: rotate(-90deg);
+  vertical-align: baseline;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.iconBox svg {
+  cursor: pointer;
+}
+
+.shopBag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shopCouter {
+  display: flex;
+}
