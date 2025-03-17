@@ -37,3 +37,26 @@
 .closeBtn {
   border: none;
 }
+
+.watchlist {
+  border: transparent;
+  padding: 1.2rem 5.6rem;
+  border-radius: 8px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: .3s all;
+  color: var(--primary-color);
+  background-color: var(--gray-color-1);
+}
+
+.addToCart {
+  border: none;
+  
+  padding: 1.2rem 5.6rem;
+  border-radius: 8px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: .3s all;
+  background-color: var(--primary-color);
+  color: var(--gray-color-1);
+}

@@ -1,3 +1,19 @@
+
+
+
+
+import Header from "../components/shop-page/Header";
+import ShopList from "../components/shop-page/ShopList";
+
 export function ShopPage() {
-    return <h1>shop page</h1>
+ 
+
+  return (
+    <>
+     <Header/>
+      <main>
+       <ShopList/>
+      </main>
+    </>
+  );
 }

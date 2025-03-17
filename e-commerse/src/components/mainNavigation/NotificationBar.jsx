@@ -18,7 +18,7 @@ export default function NotificationBar() {
         <div className={classes["notification__content"]}>
           <LuTicketPercent />
           <p>30% off storewide — Limited time!</p>
-          <Button textOnly>Get started &rarr;</Button>
+          <Button textOnly={true}>Get started &rarr;</Button>
         </div>
         <Button textOnly={true} onClick={handleClose} >
           <IoCloseOutline />

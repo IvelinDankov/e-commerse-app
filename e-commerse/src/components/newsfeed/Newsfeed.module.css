@@ -1,0 +1,53 @@
+.newsfeedSection {
+    width: 100%;
+    background-color: var(--gray-color-1);
+}
+.newsfeedWrapper {
+    max-width: 140rem;
+    margin: 0 auto;
+    padding-top: 4rem;
+}
+.newsfeedTextbox {
+    width: 54.4rem;
+    margin: 0 auto 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    text-align: center;
+
+}
+.newsfeedSubheading {
+    text-transform: uppercase;
+    color: var(--gray-color-5);
+}
+.newsfeedHeading {
+    font-family: 'poppins';
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.4px;
+
+}
+.newsfeedDesc {
+    font-size: 2rem;
+    line-height: 1.8;
+    font-weight: normal;
+}
+.newsfeedProfileText {
+    color: var(--gray-color-5);
+}
+
+.imageSlide {
+    display: grid;
+    justify-content:space-between;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.imageSlide img {
+    max-width: 24rem;
+    height: 100%;
+    margin: 0;
+    /* overflow: hidden; */
+    object-fit: cover;
+}

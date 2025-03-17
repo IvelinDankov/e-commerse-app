@@ -1,0 +1,44 @@
+header {
+  width: 100%;
+  background: var(--gray-color-1);
+}
+
+.headerWrapper {
+  width: 110rem;
+
+  margin: 0 auto;
+  height: 39.2rem;
+  background-image: linear-gradient(
+      75deg,
+      rgba(250, 250, 250, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("../../assets/shop-page-image/shop-page-image (2).jpg");
+  background-size: cover;
+  background-position: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerLinks {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.headerLinks a:first-child {
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-family: 'popins';
+    font-weight: normal;
+    margin: 2rem 0;
+    font-size: 5.4rem;
+    letter-spacing: -1px;
+}
+p {
+    font-size: 2rem;
+}

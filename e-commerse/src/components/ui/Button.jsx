@@ -1,11 +1,20 @@
 
 import classes from "./Button.module.css";
 
-export default function Button({children, textOnly, className, ...props}) {
+export default function Button({children, textOnly, className, watchlist, addToCart, ...props}) {
     
-    let cssClasses = textOnly ? classes.textBtn : classes.button;
+    let cssClasses;
 
-    cssClasses += ' ' + className
+    if (textOnly) {
+        cssClasses = classes.textBtn
+    } else if (watchlist) {
+        cssClasses = classes.watchlist
+    } else if (addToCart){
+        cssClasses = classes.addToCart
+    } else {
+        cssClasses = ' ' + classes.button
+    }
+
 
 
     return <button className={cssClasses} {...props}>

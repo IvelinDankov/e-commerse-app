@@ -27,9 +27,9 @@ export default function StarRating({ noOfStars = 5 }) {
             className={
               index <= (hover || rating) ? classes.active : classes.inactive
             }
-            onMouseMove={() => handleClick(index)}
             onMouseOver={() => handleMouseEnter(index)}
             onMouseOut={() => handleMouseLeave()}
+            onClick={() => handleClick(index)}
           />
         );
       })}

@@ -1,0 +1,86 @@
+footer {
+  padding: 8rem 0 3.2rem;
+  background-color: var(--primary-color);
+}
+
+.footerWrapper {
+  max-width: 110rem;
+  margin: 0 auto;
+  color: var(--gray-color-1);
+}
+
+.footerFrame {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.footerInfo {
+  flex: 1 0 50%;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.socialLinks a:link,
+.socialLinks a:visited {
+  color: inherit;
+}
+.socialLinks a:hover,
+.socialLinks a:active {
+  color: var(--gray-color-4);
+}
+
+.footerLinks h5 {
+  margin-bottom: 2rem;
+}
+
+.footerLinks ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footerLinks ul li a:link,
+.footerLinks ul li a:visited {
+  color: inherit;
+}
+.footerLinks ul li a:hover,
+.footerLinks ul li a:active {
+  color: var(--gray-color-4);
+}
+
+.footerPrivacy {
+  flex: 1 0 17%;
+  justify-content: start;
+}
+
+.footerPrivacy h5 {
+  margin-bottom: 2rem;
+}
+
+.footerPrivacy ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.footerPrivacy ul li a:link,
+.footerPrivacy ul li a:visited {
+  color: inherit;
+}
+.footerPrivacy ul li a:hover,
+.footerPrivacy ul li a:active {
+  color: var(--gray-color-4);
+}
+
+.footerAddress {
+  flex: 1 0 17%;
+}
