@@ -4,12 +4,12 @@ const DUMMY_CATEGORIES = [
   {
     id: "c1",
     image: "../src/assets/category-images/Golf Clubs.png",
-    title: "Golg Clubs",
+    title: "Golf Clubs",
   },
   {
     id: "c2",
     image: "../src/assets/category-images/Golf Balls.png",
-    title: "Golg Balls",
+    title: "Golf Balls",
   },
   {
     id: "c3",
