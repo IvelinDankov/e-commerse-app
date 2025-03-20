@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { CurrencyFormatter } from "../../util/CuurencyConvertor.js";
 import StarRating from "../featured/StarRating.jsx";
 import Button from "../ui/Button.jsx";
@@ -11,16 +12,25 @@ import { FaHeart } from "react-icons/fa";
 export default function ShopItem({ item }) {
   return (
     <li className={classes.shopItem}>
-
-      <img className={classes.shopItemImg} src={item.image} alt="golf itemm" />
+      <Link to={item.id}>
+        <img
+          className={classes.shopItemImg}
+          src={item.image}
+          alt={item.title}
+        />
+      </Link>
       <div className={classes.shopItemContent}>
-        <p><StarRating /></p>
+        <div>
+          <StarRating />
+        </div>
         <h5> {item.title} </h5>
-        <p> {CurrencyFormatter(item.price) } </p>
+        <p> {CurrencyFormatter(item.price)} </p>
         <p> {item.description} </p>
         <div className={classes.shipItemActions}>
-            <Button addToCart={true}> Add to cart </Button>
-            <Button watchlist={true}><FaHeart/>  Watchlist</Button>
+          <Button addToCart={true}> Add to cart </Button>
+          <Button watchlist={true}>
+            <FaHeart /> Watchlist
+          </Button>
         </div>
       </div>
     </li>

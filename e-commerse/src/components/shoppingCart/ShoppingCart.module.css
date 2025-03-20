@@ -1,0 +1,160 @@
+.shoppingCartSection {
+  width: 100%;
+  background-color: var(--gray-color-1);
+}
+
+.shoppingCartWrapper {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 8rem 0;
+}
+
+.shoppingCartProgress {
+  display: flex;
+  gap: 3.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2.6rem;
+}
+
+.shoppingCartProgress h2 {
+  flex: 1 0 100%;
+  font-family: "poppins";
+  font-size: 5.4rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.shoppingCartProgress div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.shoppingCartProgress div .progressActive{
+    background-color: var(--gray-color-5);
+}
+.shoppingCartProgressBar  {
+    border-bottom: 1px solid #000;
+}
+
+.shoppingCartProgress div span {
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.4rem;
+    height: 2rem;
+    background-color: var(--gray-color-3);
+    border-radius: 50%;
+  color: var(--gray-color-1);
+}
+
+.cartItemsContainer {
+  padding: 8rem 0;
+  display: grid;
+  gap: 6.4rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cartList {
+  grid-column: 1/3;
+  list-style: none;
+}
+
+.cartList hr {
+  margin: 2rem;
+}
+
+.cartList .cartItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartItem img {
+  display: block;
+  width: 8rem;
+  height: 9rem;
+  margin: 0;
+  object-fit: cover;
+}
+
+.cartItemBox {
+  display: flex;
+  gap: 1rem;
+}
+
+.cartItemBox div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cartItemActions {
+  align-self: center;
+  border: 1px solid #000;
+  border-radius: 4px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.cartItemActions button,
+.cartItemActions p {
+  padding: 0.4rem 0.9rem;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.cartItemPrice,
+.cartItemSubtotal {
+  align-self: center;
+}
+/* Cart Summary */
+.cartSummary {
+  padding: 2.4rem;
+  border: 1px solid var(--gray-color-5);
+  border-radius: 6px;
+}
+
+.cartSummary h4 {
+  margin-bottom: 1rem;
+}
+
+.cartSummary form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  width: 100%;
+  border: 1px solid #000;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.formGroup label {
+    font-size: 1.4rem;
+    color: var(--gray-color-5);
+}
+
+.formGroupTotal,
+.formGroupSubtotal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formGroupSubtotal p{
+  font-size: 1.4rem;
+  color: var(--gray-color-5);
+}
+
+.formGroupTotal {
+  font-weight: 600;
+}

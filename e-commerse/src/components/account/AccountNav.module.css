@@ -1,0 +1,57 @@
+
+/* account avatar */
+ aside {
+    background-color: var(--gray-color-3);
+    padding-bottom: 2rem;
+    align-self: start;
+}
+/* account main */
+/* .accountContainer main {
+} */
+
+.avatarImageBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:4rem 1.6rem;
+
+}
+.avatarImg {
+    width: 8.2rem;
+    height: 8.2rem;
+    border-radius: 50%;
+}
+.avatarContent {
+    padding: 0 1.6rem;
+}
+.avatarContent h4{
+    font-weight: 600;
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 1rem;
+}
+.avatarList {
+    margin-top: 2rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+}
+.avatarItem {
+    font-weight: 500;
+    color: var(--gray-color-4);
+}
+
+/* .avatarItem a:link, .avatarItem a:visited {
+
+}
+.avatarItem a:hover, .avatarItem a:active {
+
+} */
+
+.avatarItem a.active {
+    border-bottom: .1rem solid var(--gray-color-4);
+    padding-bottom: .5rem;
+}
+

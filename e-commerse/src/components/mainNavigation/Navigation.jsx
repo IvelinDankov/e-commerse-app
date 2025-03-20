@@ -1,30 +1,36 @@
 import classes from "./Navigation.module.css";
 import { Link, NavLink } from "react-router-dom";
-import NavInfo from "./NavInfo";
-import { useState } from "react";
-import { LuTicketPercent } from "react-icons/lu";
+import NavInfo from "./NavInfo.jsx";
+import { useContext, useState } from "react";
 import { FaRegUserCircle, FaSearch, FaShoppingBag } from "react-icons/fa";
+import SignUpProgressContext from "../../store/SignUpProgress.jsx";
 
 export default function Navigation() {
   const [isHover, setIsHover] = useState(false);
 
+  const progressCtx = useContext(SignUpProgressContext);
+
   function handleMouseHover() {
-    setIsHover(true);
+    setIsHover(false);
   }
 
   function handleMouseOut() {
     setIsHover(false);
   }
 
+  function handleLogin() {
+    progressCtx.showLogIn();
+  }
+
   return (
     <>
       <div className={classes.nav}>
         <div className={classes["nav__wrapper"]}>
-            <Link to='/'>
-          <p className={classes.logo}>
-            3legant<span>.</span>
-          </p>
-            </Link>
+          <Link to="/">
+            <p className={classes.logo}>
+              3legant<span>.</span>
+            </p>
+          </Link>
           <nav>
             <ul className={classes.navItem}>
               <li className={classes.navList}>
@@ -42,7 +48,7 @@ export default function Navigation() {
                 <NavLink
                   onMouseOver={handleMouseHover}
                   onMouseOut={handleMouseOut}
-                  to="/Shop"
+                  to="/shop"
                   className={({ isActive }) =>
                     isActive ? classes.active : undefined
                   }
@@ -62,7 +68,7 @@ export default function Navigation() {
               </li>
               <li>
                 <NavLink
-                  to="/Contact Us"
+                  to="/contact"
                   className={({ isActive }) =>
                     isActive ? classes.active : undefined
                   }
@@ -74,16 +80,18 @@ export default function Navigation() {
           </nav>
           <div className={classes.iconBox}>
             <FaSearch />
-            <FaRegUserCircle />
-            <div className={classes.shopBag}>
-            <FaShoppingBag />
-              <p className={classes.shopCouter}>
-                <span>3</span>
-              </p>
-            </div>
+            <button onClick={handleLogin}>
+              <FaRegUserCircle />
+            </button>
+            <Link to="cart" className={classes.shopBag}>
+              <FaShoppingBag />
+            </Link>
+            <p className={classes.shopCouter}>
+              <span>3</span>
+            </p>
           </div>
         </div>
-        {isHover && <NavInfo  />}
+        {isHover && <NavInfo />}
       </div>
     </>
   );

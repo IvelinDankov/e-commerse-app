@@ -1,0 +1,24 @@
+
+.addressContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content min-content;
+    gap: 2rem;
+    
+}
+
+.addressContainer h3 {
+    grid-column: 1/-1;
+    align-self: start;
+    margin: 0;
+}
+
+.addressBox {
+    border: 1px solid var(--gray-color-4);
+    border-radius: 6px;
+    padding: 1.6rem;
+}
+.addressHeader {
+    display: flex;
+    justify-content: space-between;
+}

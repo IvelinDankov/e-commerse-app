@@ -1,7 +1,6 @@
-
 .nav {
-    width: 100%;
-    background-color: var(--gray-color-1);
+  width: 100%;
+  background-color: var(--gray-color-1);
 }
 
 .nav__wrapper {
@@ -47,23 +46,21 @@ a:active {
   color: var(--primary-color);
 }
 
-
-
 a.active {
   color: var(--primary-color);
 }
 
 .navInfo {
-    height: 30rem;
-    width: 140rem;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--gray-color-1);
-    text-align: center;
-    margin: 1rem 0;
-    z-index: 100;
-    padding: 2rem;
+  height: 30rem;
+  width: 140rem;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--gray-color-1);
+  text-align: center;
+  margin: 1rem 0;
+  z-index: 100;
+  padding: 2rem;
 }
 
 a span {

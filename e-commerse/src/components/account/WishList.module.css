@@ -1,0 +1,66 @@
+.wishlistHeader {
+  display: flex;
+  justify-content: space-between;
+  color: var(--gray-color-4);
+  border-bottom: 1px solid var(--gray-color-4);
+  padding-bottom: 1rem;
+}
+.wishlistHeader p {
+  font-size: 1.4rem;
+}
+
+.wishlistList {
+  display: flex;
+  flex-direction: column;
+}
+.wishlistItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+.wishlistItem:not(:last-child) {
+  border-bottom: 1px solid var(--gray-color-4);
+}
+
+.wishlistProductBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wishlistProductBox h5 {
+  align-self: start;
+}
+
+.wishlistBtn {
+  border: none;
+  display: flex;
+  align-content: inherit;
+  justify-content: center;
+  cursor: pointer;
+  background-color: var(--gray-color-1);
+}
+.wishlistImgBox {
+  width: 6rem;
+  height: 7.2rem;
+}
+.wishlistImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  margin: 0;
+}
+.wishlistPrice {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.wishlistActionBtn {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 6px;
+  color: var(--gray-color-1);
+  background-color: var(--primary-color);
+}

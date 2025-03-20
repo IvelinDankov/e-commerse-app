@@ -1,0 +1,157 @@
+.sectionWrapper {
+  padding: 8rem 0;
+}
+
+.checkoutProgress {
+  display: flex;
+  gap: 3.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2.6rem;
+}
+
+.checkoutProgress h2 {
+  flex: 1 0 100%;
+  font-family: "poppins";
+  font-size: 5.4rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.checkoutProgress div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.checkoutProgress div .progressActive {
+  background-color: var(--gray-color-5);
+}
+/* .checkoutProgressBar  {
+    border-bottom: 1px solid #000;
+} */
+
+.checkoutProgress div span {
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.4rem;
+  height: 2rem;
+  background-color: var(--gray-color-3);
+  border-radius: 50%;
+  color: var(--gray-color-1);
+}
+
+.checkoutProgressBar {
+  padding-bottom: 1rem;
+}
+
+.checkoutProgressBar:first-of-type {
+  border-bottom: 2px solid var(--secondary-color-green);
+}
+
+.checkoutProgressBar .checkoutProgressNum {
+  background-color: var(--secondary-color-green);
+  position: relative;
+}
+
+.checkoutProgressBar .checkoutProgressNum svg {
+  stroke: var(--gray-color-1);
+  width: 1.5rem;
+  height: 1.5rem;
+  /* display: block; */
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.checkoutProgressBar:nth-of-type(2) {
+    border-bottom: 2px solid var(--secondary-color-green);
+}
+.checkoutProgressBar:nth-of-type(3) {
+    border-bottom: 2px solid var(--gray-color-4);
+}
+
+.completeContainer {
+    box-shadow: 0 1rem 2rem var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem;
+    margin-top: 8rem;
+    border-radius: 8px;
+}
+
+.completeContainer  h5{
+    font-size: 2.8rem;
+    letter-spacing: -0.6px;
+    font-family: 'poppins';
+    color: var(--gray-color-4);
+    font-weight: 500;
+
+}
+
+.completeContainer h3 {
+    font-size: 4rem;
+    letter-spacing: -0.6px;
+    font-family: 'poppins';
+    color: var(--primary-color);
+    margin: 2rem 0;
+}
+
+.completeList {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+}
+.completeItem {
+   position: relative;
+}
+
+.completeItem img {
+    width: 8rem;
+    height: 9re;
+}
+.completeItem span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    color: var(--gray-color-1);
+}
+.completeDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2.4rem 0;
+}
+
+.completeDetails  p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+.completeDetailsInfo{
+    
+    font-size: 1.4rem;
+    color: var(--gray-color-4);
+}
+
+.completeDetails a {
+    margin-top: 2.4rem;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    padding: .5rem 3rem;
+    color: var(--gray-color-1);
+}

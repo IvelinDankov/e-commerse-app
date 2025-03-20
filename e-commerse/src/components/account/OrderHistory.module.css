@@ -1,0 +1,20 @@
+
+.orderTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+.orderTableHead tr > td{
+    color: var(--gray-color-4);
+    border: none;
+    border-collapse: collapse;
+    border-spacing: initial;
+    border-bottom: 1px solid var(--gray-color-3);
+    padding: 0.5rem 0;
+}
+
+.orderTableBody tr:not(:last-child) td {
+    border-bottom: 1px solid var(--gray-color-3);
+}
+.orderTableBody tr td {
+    padding: 1rem 0;
+}

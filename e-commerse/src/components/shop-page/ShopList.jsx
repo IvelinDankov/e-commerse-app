@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import classes from "./ShopList.module.css";
 import ShopItem from "./ShopItem";
-import Button from "../ui/Button";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { IoGrid } from "react-icons/io5";
 import { CiGrid2V } from "react-icons/ci";
@@ -76,14 +75,14 @@ Accessories */
             </select>
           </p>
           <div className={classes.shopListActions}>
-          <p className={classes.shopListFormWrapper}>
-            <select htmlFor="Price">
-              <option value="allPrice">Sort by</option>
-              <option value="hundred">0 - 100</option>
-              <option value="twoHundred">101 - 200</option>
-              <option value="twoHundredFiveHundred">201 - 500</option>
-            </select>
-          </p>
+            <p className={classes.shopListFormWrapper}>
+              <select htmlFor="Price">
+                <option value="allPrice">Sort by</option>
+                <option value="hundred">0 - 100</option>
+                <option value="twoHundred">101 - 200</option>
+                <option value="twoHundredFiveHundred">201 - 500</option>
+              </select>
+            </p>
             <button>
               <BsFillGrid3X3GapFill />
             </button>
@@ -102,7 +101,7 @@ Accessories */
       <ul className={classes.shopList}>
         {loading && <p className={classes.loading}>Gold items Loading...</p>}
         {!loading &&
-          initialItems.map((item) => <ShopItem key={item.is} item={item} />)}
+          initialItems.map((item) => <ShopItem key={item.id} item={item} />)}
         <div className={classes.actions}>
           <button onClick={handleMore} className={classes.showMore}>
             Show More
