@@ -27,7 +27,7 @@ export default function Signup() {
         <div className={classes.content}>
           <h2>Sign Up</h2>
           <p>
-            Already have account? <Button textOnly={true} onClick={handleLogIn}>Log In</Button>
+            Already have account? <button className={classes.textBtn} onClick={handleLogIn}>Log In</button>
           </p>
           <p className={classes.inputBox}>
             <input type="text" placeholder="Your name" name="yourName" />
@@ -39,10 +39,11 @@ export default function Signup() {
             <input type="checkbox" name="terms" id="terms" />I agree with
             Privacy Policy and Terms of Use
           </p>
+          <div className={classes.loginActions}>
           <Button className={classes.closeBtn} onClick={handleClose} textOnly>
             Close
           </Button>
-          <Button addToCart> Sign Up </Button>
+          <button className={classes.signinBtn}> Sign Up </button></div>
         </div>
       </div>
     </Modal>

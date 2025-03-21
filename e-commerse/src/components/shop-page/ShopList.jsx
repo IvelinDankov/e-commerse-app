@@ -5,6 +5,7 @@ import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { IoGrid } from "react-icons/io5";
 import { CiGrid2V } from "react-icons/ci";
 import { CiGrid2H } from "react-icons/ci";
+import Loading from "../loading/Loading";
 
 export default function ShopList() {
   const [items, setItems] = useState([]);
@@ -99,7 +100,7 @@ Accessories */
         </form>
       </header>
       <ul className={classes.shopList}>
-        {loading && <p className={classes.loading}>Gold items Loading...</p>}
+        {loading && <Loading />}
         {!loading &&
           initialItems.map((item) => <ShopItem key={item.id} item={item} />)}
         <div className={classes.actions}>

@@ -56,7 +56,7 @@ export default function Navigation() {
                   Shop <span>&#x2039;</span>
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   to="/Product"
                   className={({ isActive }) =>
@@ -65,7 +65,7 @@ export default function Navigation() {
                 >
                   Product <span>&#x2039;</span>
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink
                   to="/contact"
@@ -80,13 +80,13 @@ export default function Navigation() {
           </nav>
           <div className={classes.iconBox}>
             <FaSearch />
-            <button onClick={handleLogin}>
+            <button className={classes.iconBoxBtn} onClick={handleLogin}>
               <FaRegUserCircle />
             </button>
             <Link to="cart" className={classes.shopBag}>
               <FaShoppingBag />
             </Link>
-            <p className={classes.shopCouter}>
+            <p className={classes.shopCounter}>
               <span>3</span>
             </p>
           </div>

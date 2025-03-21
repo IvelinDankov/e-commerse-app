@@ -27,9 +27,9 @@ export default function Login() {
           <h2>Login</h2>
           <p>
             Don't have account?{" "}
-            <Button textOnly onClick={handleSignup} className={classes.signupBtn}>
+            <button className={classes.textBtn} onClick={handleSignup}>
               Sign Up
-            </Button>
+            </button>
           </p>
           <p className={classes.inputBox}>
             <input type="email" placeholder="Email address" name="email" />
@@ -39,10 +39,11 @@ export default function Login() {
             <input type="checkbox" name="terms" id="terms" />
             Remember me
           </p>
+          <div className={classes.loginActions}>
           <Button className={classes.closeBtn}  onClick={handleClose} textOnly>
             Close
           </Button>
-          <Button addToCart> Sign In </Button>
+          <button className={classes.signinBtn}> Sign In </button></div>
         </div>
       </div>
     </Modal>

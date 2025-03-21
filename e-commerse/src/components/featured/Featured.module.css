@@ -8,12 +8,11 @@
   padding-left: 17rem;
   margin: 0 auto;
   font-family: "poppins";
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-.featuredBox ul {
-  display: flex;
-  gap: 2rem;
+.featuredList {
+  display: block;
 }
 
 .featuredBox h2 {
@@ -24,28 +23,28 @@
 }
 
 .header {
-    display: flex;
-    padding-right: 17rem;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 4.8rem;
+  display: flex;
+  padding-right: 17rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.8rem;
 }
 
 .header .points {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
-.header .points a {
+.header .points button {
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: 2rem;
+  height: 2rem;
   background-color: #000;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.header .points a.active { 
-    background-color: #777
+.header .points button.active {
+  background-color: #777;
 }

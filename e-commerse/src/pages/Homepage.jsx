@@ -1,3 +1,4 @@
+import { useLoaderData } from "react-router-dom";
 import Banner from "../components/banner/Banner";
 import Blog from "../components/blog/Blog";
 import Featured from "../components/featured/Featured";
@@ -9,10 +10,12 @@ import ShopByCategory from "../components/shop-by-category/ShopByCaregory";
 import ShopCollection from "../components/shop-collection/shopCollection";
 
 export default function HomePage() {
+  const data = useLoaderData();
+
   return (
     <>
       <Hero />
-      <Featured />
+      <Featured items={data} />
       <ShopByCategory />
       <Banner />
       <ShopCollection />
@@ -22,4 +25,18 @@ export default function HomePage() {
       <Footer />
     </>
   );
+}
+
+export async function loader() {
+  const response = await fetch(
+    "https://golf-shop-application-default-rtdb.europe-west1.firebasedatabase.app/golf.json"
+  );
+
+  if (!response.ok) {
+    throw new Response(
+      JSON.stringify({ message: "Could not fetch golfItems" })
+    );
+  }
+
+  return response;
 }

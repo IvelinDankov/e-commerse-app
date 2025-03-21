@@ -1,0 +1,90 @@
+.sectionWrapper {
+}
+.contactNavigation {
+  margin-bottom: 4rem;
+}
+.contactNavigationList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.contactNavigationList a.active {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+.contactNavigationItem {
+}
+.contactNavigationBox h2 {
+  width: 65%;
+  font-family: "Poppins";
+  font-size: 5.4rem;
+  letter-spacing: -1px;
+  margin-bottom: 2rem;
+}
+.contactNavigationBox p {
+  font-size: 1.6rem;
+  margin-bottom: 4.8rem;
+}
+.contactNavigationFeature {
+  display: flex;
+  margin-bottom: 6.4rem;
+}
+.contactNavigationFeatureImgBox {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 50%;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.contactNavigationFeatureImgBox img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  object-fit: cover;
+}
+.contactNavigationFeatureArticle {
+  flex: 1 0 50%;
+  padding: 7.2rem;
+  background-color: var(--gray-color-3);
+}
+.contactNavigationFeatureArticle h3 {
+  font-size: 4rem;
+  font-family: "poppins";
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  margin-bottom: 4rem;
+}
+.contactNavigationFeatureArticle p {
+  font-size: 1.6rem;
+}
+.contactNavigationFeatureArticle p:last-of-type {
+  margin-bottom: 4rem;
+}
+.contactNavigationInfoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  justify-content: space-between;
+  padding-bottom: 6.4rem;
+}
+.contactNavigationInfoContainer h3 {
+  text-align: center;
+  flex: 1 0 100%;
+  font-size: 4rem;
+  font-family: "poppins";
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  margin-bottom: 4rem;
+}
+.contactNavigationInfoCart {
+  border: 1px solid var(--gray-color-3);
+  background-color: var(--gray-color-3);
+  flex: 1;
+  width: 100%;
+  padding: 1.6rem 3.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

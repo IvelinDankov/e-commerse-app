@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import HomePage from "./Pages/Homepage.jsx";
+import HomePage, { loader as homePageLoader } from "./Pages/Homepage.jsx";
 import ProductPage from "./Pages/ProductPage.jsx";
 // import RootLayout from "./Pages/RootLayout.jsx";
 import { ShopPage } from "./pages/Shop.jsx";
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     path: "",
     element: <RootLayout />,
     children: [
-      { index: true, element: <HomePage /> },
+      { index: true, element: <HomePage />, loader: homePageLoader },
       {
         path: "shop",
         element: <ShopLayout />,

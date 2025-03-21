@@ -12,7 +12,7 @@ export default function Blog() {
       <div className={classes.blogWrapper}>
         <header className={classes.blogHeader}>
           <h2>Latest Articles</h2>
-          <a href="#">View More</a>
+          <a href="/shop">View More</a>
         </header>
         <ul className={classes.blogItems}>
           <li>

@@ -1,0 +1,12 @@
+.loadingContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 20rem;
+}
+.loadingText {
+    font-family: 'poppins';
+    font-size: 9.6rem;
+    letter-spacing: -2%;
+}
