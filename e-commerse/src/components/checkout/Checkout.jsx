@@ -9,14 +9,32 @@ import Button from "../ui/Button";
 import golfPuterImg from "../../../src/assets/items-images/golf-puter.jpg";
 import Complete from "../../pages/ComplatePage";
 import { Form } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { CurrencyFormatter } from "../../util/CuurencyConvertor";
+import { cartActions } from "../../store/cart-slice";
 
 export default function Checkout() {
   const [value, setValue] = useState("");
   const options = useMemo(() => countryList().getData(), []);
 
+  const dispatch = useDispatch()
+
+  const items = useSelector(state => state.cart.items)
+  const totalPrice = useSelector(state => state.cart.totalPrice
+  )
+
   const changeHandler = (value) => {
     setValue(value);
   };
+
+
+  function handleRemoveItem(id) {
+    dispatch(cartActions.removeItemFromCart(id))
+  }
+
+  function handleAddItem(item) {
+    dispatch(cartActions.addItemToCart(item))
+  }
 
     // function handlePlaceOrder(e) {
     //   e.preventDefault()
@@ -145,21 +163,22 @@ export default function Checkout() {
           <div className={classes.orderSummaryBox}>
             <h3>Order summary</h3>
             <ul className={classes.orderSummaryList}>
-              <li className={classes.orderSummaryItem}>
+              {items && items.map(item => <li key={item.id} className={classes.orderSummaryItem}>
                 <p className={classes.orderSummaryImgbox}>
-                  <img className={classes.orderSummaryImg} src={golfPuterImg} alt="oreder image" />
+                  <img className={classes.orderSummaryImg} src={item.image} alt="oreder image" />
                 </p>
                 <div>
-                <h4 className={classes.orderSummaryTitle}> Tray Table (title) </h4>
+                <h4 className={classes.orderSummaryTitle}> {item.title} </h4>
                 <div className={classes.orderSummaryActionBox}>
-                  <button className={classes.orderSummaryBtn}>-</button>
-                  <p className={classes.orderSummaryQty}>2</p>
-                  <button className={classes.orderSummaryBtn}>+</button>
+                  <button onClick={() => handleRemoveItem(item.id)} className={classes.orderSummaryBtn}>-</button>
+                  <p className={classes.orderSummaryQty}> {item.quantity} </p>
+                  <button onClick={() => handleAddItem(item)} className={classes.orderSummaryBtn}>+</button>
                 </div>
 
                 </div>
-                <p className={classes.orderSummarySum}>$38 (sum)</p>
-              </li>
+                <p className={classes.orderSummarySum}> {CurrencyFormatter(item.totalPrice) } </p>
+              </li>)}
+              
             </ul>
             <div className={classes.orderSummaryInfoBox}>
               <p>Shipping</p>
@@ -167,11 +186,11 @@ export default function Checkout() {
             </div>
             <div className={classes.orderSummaryInfoBox}>
               <p>Subtotal</p>
-              <p>$99.00</p>
+              <p> 99 </p>
             </div>
             <div className={classes.orderSummaryInfoBox}>
               <p>Total</p>
-              <p>$234.00</p>
+              <p> {CurrencyFormatter(totalPrice) } </p>
             </div>
           </div>
         </div>

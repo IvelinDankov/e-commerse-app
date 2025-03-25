@@ -4,9 +4,15 @@ import NavInfo from "./NavInfo.jsx";
 import { useContext, useState } from "react";
 import { FaRegUserCircle, FaSearch, FaShoppingBag } from "react-icons/fa";
 import SignUpProgressContext from "../../store/SignUpProgress.jsx";
+import { uiAction } from "../../store/ui-slice.jsx";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Navigation() {
+  const cartQuantity = useSelector(state => state.cart.totalQuantity)
+
   const [isHover, setIsHover] = useState(false);
+
+  const dispatch = useDispatch();
 
   const progressCtx = useContext(SignUpProgressContext);
 
@@ -20,6 +26,11 @@ export default function Navigation() {
 
   function handleLogin() {
     progressCtx.showLogIn();
+  }
+
+  function handleCartClick() {
+    dispatch(uiAction.toggle());
+    dispatch(uiAction.checkoutPage())
   }
 
   return (
@@ -80,14 +91,14 @@ export default function Navigation() {
           </nav>
           <div className={classes.iconBox}>
             <FaSearch />
-            <button className={classes.iconBoxBtn} onClick={handleLogin}>
+            <button onClick={handleLogin} className={classes.iconBoxBtn}>
               <FaRegUserCircle />
             </button>
-            <Link to="cart" className={classes.shopBag}>
+            <button onClick={handleCartClick} className={classes.shopBag}>
               <FaShoppingBag />
-            </Link>
+            </button>
             <p className={classes.shopCounter}>
-              <span>3</span>
+              <span> {cartQuantity} </span>
             </p>
           </div>
         </div>

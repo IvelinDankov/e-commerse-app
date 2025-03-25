@@ -1,15 +1,33 @@
 import classes from "./ShoppingCart.module.css";
 
-import golfClub from "../../../src/assets/items-images/golf-club.jpg";
-import Button from "../ui/Button";
-import CheckoutPage from "../../pages/CheckoutPage";
+import Button from "../ui/Button"
+import { useDispatch, useSelector } from "react-redux";
+import { cartActions } from "../../store/cart-slice";
+import { CurrencyFormatter } from "../../util/CuurencyConvertor.js";
+import { uiAction } from "../../store/ui-slice.jsx";
 
 export default function ShoppingCartComponent() {
+  const dispatch = useDispatch();
+  const items = useSelector((state) => state.cart.items);
+  // const showCheckoutPage = useSelector((state) => state.ui.showCheckoutPage)
+  const totalPrice = useSelector((state) => state.cart.totalPrice);
 
-    function handleCheckout() {
-        return <CheckoutPage/>
-    }
+  function handleCheckout() {
+    dispatch(uiAction.checkoutPage())
+    dispatch(uiAction.toggle())
+  }
 
+  function handleAddItem(item) {
+    dispatch(cartActions.addItemToCart(item));
+  }
+
+  function handleRemoveItem(id) {
+    dispatch(cartActions.removeItemFromCart(id));
+  }
+
+  function handleRemoveAllItems(id) {
+    dispatch(cartActions.removeItemsFromCart(id))
+  }
 
   return (
     <section className={classes.shoppingCartSection}>
@@ -39,26 +57,28 @@ export default function ShoppingCartComponent() {
               <p>Subtotal</p>
             </li>
             <hr />
-            <li className={classes.cartItem}>
-              <div className={classes.cartItemBox}>
-                <img src={golfClub} alt="an product image" />
-                <div>
-                  <h4> Product title </h4>
-                  <button>Remove</button>
+            {items.map((item) => (
+              <li key={item.id} className={classes.cartItem}>
+                <div className={classes.cartItemBox}>
+                  <img src={item.image} alt={item.title} />
+                  <div>
+                    <h4> {item.title} </h4>
+                    <button onClick={() => handleRemoveAllItems(item.id)} className={classes.removeBtn}>Remove</button>
+                  </div>
                 </div>
-              </div>
-              <div className={classes.cartItemActions}>
-                <button>-</button>
-                <p>2</p>
-                <button>+</button>
-              </div>
-              <div className={classes.cartItemPrice}>
-                <p>$19</p>
-              </div>
-              <div className={classes.cartItemSubtotal}>
-                <p> $38</p>
-              </div>
-            </li>
+                <div className={classes.cartItemActions}>
+                  <button onClick={() => handleRemoveItem(item.id)}>-</button>
+                  <p> {item.quantity} </p>
+                  <button onClick={() => handleAddItem(item)}>+</button>
+                </div>
+                <div className={classes.cartItemPrice}>
+                  <p> {CurrencyFormatter(item.price) } </p>
+                </div>
+                <div className={classes.cartItemSubtotal}>
+                  <p> {CurrencyFormatter(item.totalPrice) }</p>
+                </div>
+              </li>
+            ))}
           </ul>
           <article className={classes.cartSummary}>
             <h4>Cart Summary</h4>
@@ -69,25 +89,23 @@ export default function ShoppingCartComponent() {
               </p>
               <p className={classes.formGroup}>
                 <input type="radio" name="shipping" id="express" />
-                <label htmlFor="express">Express shipping
-
-
-                </label>
+                <label htmlFor="express">Express shipping</label>
               </p>
               <p className={classes.formGroup}>
-
                 <input type="radio" name="shipping" id="pickup" />
                 <label htmlFor="pickup">Pick Up</label>
               </p>
-            <div  className={classes.formGroupSubtotal}>
-              {" "}
-              <p>Subtotal</p> <p>$123</p>
-            </div>
-            <hr />
-            <div  className={classes.formGroupTotal}>
-              <p>Total</p> <p>$1345</p>
-            </div>
-            <Button onClick={handleCheckout} addToCart={true}>Checkout</Button>
+              <div className={classes.formGroupSubtotal}>
+                {" "}
+                <p>Subtotal</p> <p>$123</p>
+              </div>
+              <hr />
+              <div className={classes.formGroupTotal}>
+                <p>Total</p> <p> {CurrencyFormatter(totalPrice) } </p>
+              </div>
+              <Button  addToCart={true}>
+                Checkout
+              </Button>
             </form>
           </article>
         </div>

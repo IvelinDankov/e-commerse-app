@@ -5,11 +5,25 @@ import Button from "../ui/Button.jsx";
 import classes from "./ShopItem.module.css";
 
 import { FaHeart } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../store/cart-slice.jsx";
 // e-commerse\src\assets\items-images\golf-driver.jpg
 // import img from "../../../src/assets/items-images/golf-puter.jpg";
 // import img from "../../../src/assets/items-images/golf-rolley.jpg";
 
 export default function ShopItem({ item }) {
+  const dispatch = useDispatch()
+
+  function addToCardHandler() {
+    dispatch(cartActions.addItemToCart({
+      id: item.id,
+      title: item.title,
+      image: item.image,
+      description: item.description,
+      price: item.price,
+    }))
+  }
+
   return (
     <li className={classes.shopItem}>
       <Link to={item.id}>
@@ -27,7 +41,7 @@ export default function ShopItem({ item }) {
         <p> {CurrencyFormatter(item.price)} </p>
         <p> {item.description} </p>
         <div className={classes.shipItemActions}>
-          <Button addToCart={true}> Add to cart </Button>
+          <Button onClick={addToCardHandler} addToCart={true}> Add to cart </Button>
           <Button watchlist={true}>
             <FaHeart /> Watchlist
           </Button>
